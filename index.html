@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML5 Canvas </title>
+        <style>
+            #my-canvas {
+                margin: 20px;
+                border: 1px black solid;
+                box-sizing: content-box;
+            }
+            #controls {
+                margin: 20px;
+                border: 1px black solid;
+                box-sizing: content-box; 
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body onload="setup()">
+        <div class="container">
+            <canvas id="my-canvas" width="600px" height="600px"></canvas>
+            <div style="display: flex; justify-content: center;flex-direction: column;align-items: center;">
+                <p>Controls: Choose a preset value of c, click anywhere in the domain or click the button to start animation from 0.7885(e<sup>0</sup>,e<sup>2&Pi;i</sup>)</sup></p>
+                <select id="preset-values">
+                    <option value="-0.4,0.6">c = −0.4 + 0.6i</option>
+                    <option value="-0.6180339888,0">c = 1 − φ</option>
+                    <option value="0.285,0">c = 0.285</option>
+                    <option value="0.285,0.01">c = 0.285 + 0.01i</option>
+                    <option value="0.45,0.1428">c = 0.45 + 0.1428i</option>
+                    <option value="-0.835,-0.2321">c = −0.835 − 0.2321i</option>
+                    <option value="-0.8,0.156">c = −0.8 + 0.156i</option>
+                    <option value="0,-0.8">c = −0.8i</option>
+                </select>
+                <canvas id="controls" width="200px" height="200px"></canvas>
+                <div>
+                    <button id="button">Start/Stop animation</button>
+                </div>
+                
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
